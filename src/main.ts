@@ -34,4 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			contentArea.scrollTo({ top, behavior: "smooth" })
 		}
 	})
+
+	document.getElementById("back-to-top")?.addEventListener("click", (e) => {
+		e.preventDefault()
+		window.scrollTo({ top: 0, behavior: "smooth" })
+	})
 })

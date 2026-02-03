@@ -365,6 +365,26 @@ body {
 	color: var(--text-tertiary);
 }
 
+.back-to-top {
+	display: none;
+	margin-top: 32px;
+	padding: 12px 24px;
+	font-size: var(--size-xs);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--text-secondary);
+	text-decoration: none;
+	border: 1px solid var(--accent-border);
+	border-radius: var(--radius-inner);
+	text-align: center;
+	transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-to-top:hover {
+	color: var(--text-primary);
+	border-color: var(--text-tertiary);
+}
+
 .cursor-follower {
 	position: fixed;
 	width: 20px;
@@ -386,8 +406,14 @@ body {
 	.layout {
 		grid-template-columns: 240px 1fr;
 	}
+
 	.content-area {
 		padding: 60px 40px;
+		gap: 80px;
+	}
+
+	.project-list {
+		gap: 60px;
 	}
 }
 
@@ -401,22 +427,105 @@ body {
 
 	body {
 		overflow-y: auto;
+		height: auto;
 	}
 
 	.sidebar {
-		padding: 40px 20px;
+		padding: 32px 24px;
 		height: auto;
 		border-right: none;
 		border-bottom: 1px solid var(--accent-border);
+		gap: 32px;
+	}
+
+	.sidebar-header {
+		gap: 12px;
+	}
+
+	.brand {
+		font-size: 24px;
+	}
+
+	.bio {
+		max-width: 100%;
+	}
+
+	.sidebar-nav {
+		flex: 0;
+	}
+
+	.nav-list {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 12px 24px;
 	}
 
 	.content-area {
-		padding: 40px 20px;
+		padding: 32px 24px;
 		overflow: visible;
+		gap: 60px;
 	}
 
 	.project-card {
 		grid-template-columns: 1fr;
 		gap: 20px;
+	}
+
+	.project-list {
+		gap: 48px;
+	}
+
+	.project-desc {
+		max-width: 100%;
+	}
+
+	.experience-row {
+		flex-direction: column;
+		gap: 4px;
+		padding: 16px 0;
+	}
+
+	.experience-cell {
+		padding: 0;
+	}
+
+	.experience-cell.role,
+	.experience-cell.company {
+		flex: none;
+	}
+
+	.experience-cell.date {
+		text-align: left;
+	}
+
+	.back-to-top {
+		display: block;
+	}
+}
+
+@media (max-width: 480px) {
+	.sidebar {
+		padding: 24px 16px;
+	}
+
+	.brand {
+		font-size: 20px;
+	}
+
+	.role {
+		font-size: 12px;
+	}
+
+	.content-area {
+		padding: 24px 16px;
+	}
+
+	.section-label {
+		margin-bottom: 24px;
+	}
+
+	.social-links {
+		flex-wrap: wrap;
+		gap: 12px 16px;
 	}
 }
