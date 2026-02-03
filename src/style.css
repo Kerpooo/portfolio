@@ -2,22 +2,26 @@
 	--bg-body: #050505;
 	--bg-card: #0a0a0a;
 	--text-primary: #f2f2f2;
-	--text-secondary: #666666;
-	--text-tertiary: #333333;
+	--text-secondary: #b0b0b0;
+	--text-tertiary: #8a8a8a;
 	--accent-border: #1a1a1a;
 	--accent-hover: #ffffff;
 
 	--font-main:
 		"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		sans-serif;
-	--size-xs: 11px;
-	--size-sm: 13px;
-	--size-base: 15px;
-	--size-lg: 24px;
+	--size-xs: 12px;
+	--size-sm: 14px;
+	--size-base: 16px;
+	--size-lg: 28px;
 
 	--radius-outer: 0px;
 	--radius-inner: 4px;
 	--spacing-unit: 24px;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 * {
@@ -61,88 +65,121 @@ body {
 }
 
 .sidebar {
-	padding: 60px 40px;
+	padding: 48px 32px;
 	border-right: 1px solid var(--accent-border);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
+	gap: 40px;
+}
+
+.sidebar-header {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
 }
 
 .brand {
-	font-size: var(--size-sm);
-	font-weight: 500;
-	letter-spacing: 0.5px;
+	font-size: var(--size-lg);
+	font-weight: 600;
+	letter-spacing: -0.5px;
 	color: var(--text-primary);
-	margin-bottom: 60px;
-	display: block;
 	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
-.intro {
-	margin-bottom: auto;
+.brand:hover {
+	color: var(--accent-hover);
 }
 
-.intro h1 {
-	font-size: var(--size-base);
-	font-weight: 400;
-	color: var(--text-secondary);
-	margin-bottom: 24px;
-	max-width: 200px;
-}
-
-.intro h1 span {
+.role {
+	font-size: var(--size-sm);
 	color: var(--text-primary);
-	display: block;
-	margin-bottom: 8px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.bio {
+	font-size: var(--size-sm);
+	color: var(--text-secondary);
+	line-height: 1.6;
+	max-width: 240px;
+}
+
+.sidebar-nav {
+	flex: 1;
 }
 
 .nav-list {
 	list-style: none;
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	gap: 16px;
 }
 
 .nav-item a {
-	font-size: var(--size-xs);
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	font-size: var(--size-sm);
 	color: var(--text-secondary);
 	text-decoration: none;
-	transition: color 0.2s ease;
-	display: flex;
-	align-items: center;
-	gap: 10px;
+	transition: color 0.2s ease, transform 0.2s ease;
+	display: inline-block;
 }
 
 .nav-item a:hover {
 	color: var(--text-primary);
+	transform: translateX(4px);
 }
 
-.nav-item a::before {
-	content: "";
-	width: 4px;
-	height: 4px;
-	background: currentColor;
-	border-radius: 50%;
-	opacity: 0;
-	transition: opacity 0.2s ease;
+.sidebar-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 
-.nav-item a:hover::before {
-	opacity: 1;
+.social-links {
+	display: flex;
+	gap: 20px;
 }
 
-.meta-info {
+.social-link {
 	font-size: var(--size-xs);
 	color: var(--text-tertiary);
-	margin-top: 40px;
-	line-height: 1.6;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	transition: color 0.2s ease;
+}
+
+.social-link:hover {
+	color: var(--text-primary);
+}
+
+.status {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: var(--size-xs);
+	color: var(--text-tertiary);
+}
+
+.status-dot {
+	width: 6px;
+	height: 6px;
+	background: #22c55e;
+	border-radius: 50%;
+	animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+	0%, 100% { opacity: 1; }
+	50% { opacity: 0.5; }
 }
 
 .content-area {
 	overflow-y: auto;
+	scroll-behavior: smooth;
 	padding: 60px 80px;
 	display: flex;
 	flex-direction: column;
@@ -167,14 +204,6 @@ body {
 	color: var(--text-tertiary);
 	margin-bottom: 40px;
 	display: block;
-	position: sticky;
-	top: 0;
-	background: var(--bg-body);
-	padding-bottom: 20px;
-	z-index: 10;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	background: rgba(5, 5, 5, 0.85);
 }
 
 .project-list {
@@ -298,12 +327,14 @@ body {
 	letter-spacing: 0.5px;
 }
 
-.experience-table {
+.experience-list {
 	width: 100%;
-	border-collapse: collapse;
+	display: flex;
+	flex-direction: column;
 }
 
 .experience-row {
+	display: flex;
 	border-bottom: 1px solid var(--accent-border);
 }
 
@@ -315,19 +346,19 @@ body {
 	padding: 20px 0;
 	font-size: var(--size-sm);
 	color: var(--text-secondary);
-	vertical-align: top;
 }
 
 .experience-cell.role {
 	color: var(--text-primary);
-	width: 40%;
+	flex: 0 0 40%;
 }
 
 .experience-cell.company {
-	width: 40%;
+	flex: 0 0 40%;
 }
 
 .experience-cell.date {
+	flex: 1;
 	text-align: right;
 	font-family: monospace;
 	font-size: var(--size-xs);

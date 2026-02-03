@@ -10,10 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	})
 
-	const experienceRows = document.querySelectorAll<ExperienceRow>("experience-row")
+	const experienceRows =
+		document.querySelectorAll<ExperienceRow>("experience-row")
 	experienceRows.forEach((row, index) => {
 		if (experienceData[index]) {
 			row.data = experienceData[index]
+		}
+	})
+
+	const contentArea = document.querySelector(".content-area")
+
+	document.getElementById("home-link")?.addEventListener("click", (e) => {
+		e.preventDefault()
+		contentArea?.scrollTo({ top: 0, behavior: "smooth" })
+	})
+
+	document.getElementById("projects-link")?.addEventListener("click", (e) => {
+		e.preventDefault()
+		const target = document.getElementById("projects")
+		if (target && contentArea) {
+			const top =
+				target.getBoundingClientRect().top + contentArea.scrollTop - 60
+			contentArea.scrollTo({ top, behavior: "smooth" })
 		}
 	})
 })

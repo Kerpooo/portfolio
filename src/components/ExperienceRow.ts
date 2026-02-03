@@ -24,13 +24,12 @@ class ExperienceRow extends HTMLElement {
 	private render() {
 		if (!this._data) return
 
-		this.innerHTML = `        
-				<tr class="experience-row">
-					<td class="experience-cell role">${this._data.role}</td>
-					<td class="experience-cell company">${this._data.company}</td>
-					<td class="experience-cell date">${this._data.start_date} — ${this._data.end_date}</td>
-				</tr>
-            `
+		this.classList.add("experience-row")
+		this.innerHTML = `
+			<span class="experience-cell role">${this._data.role}</span>
+			<span class="experience-cell company">${this._data.company}</span>
+			<span class="experience-cell date">${this._data.start_date} — ${this._data.end_date}</span>
+		`
 	}
 }
 customElements.define("experience-row", ExperienceRow)

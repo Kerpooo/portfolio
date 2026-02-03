@@ -7,31 +7,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>kevvek</title>
 	</head>
-	<body class="layout noise-overlay">
-		<script type="module" src="/src/main.ts"></script>
-		<aside class="sidebar">
-			<div>
-				<a href="#" class="brand">Kevin Rincón</a>
-				<div class="intro">
-					<h1>
-						<span>Systems Engineer</span>
+	<body>
+		<div class="noise-overlay"></div>
+		<main class="layout">
+			<script type="module" src="/src/main.ts"></script>
+			<aside class="sidebar">
+				<header class="sidebar-header">
+					<a href="#" class="brand" id="home-link">Kevin Rincón</a>
+					<p class="role">Systems Engineer</p>
+					<p class="bio">
 						Based in Colombia. Specializing in high-performance Full
 						Stack applications and Systems Design.
-					</h1>
-				</div>
-			</div>
+					</p>
+				</header>
 
-			<div>
-				<nav>
+				<nav class="sidebar-nav">
 					<ul class="nav-list">
 						<li class="nav-item">
-							<a href="#projects">Selected Works</a>
+							<a href="#projects" id="projects-link">Selected Works</a>
 						</li>
 						<li class="nav-item">
 							<a href="#experience">Experience</a>
-						</li>
-						<li class="nav-item">
-							<a href="#about">About</a>
 						</li>
 						<li class="nav-item">
 							<a href="mailto:kevrj21@gmail.com">Contact</a>
@@ -39,32 +35,49 @@
 					</ul>
 				</nav>
 
-				<div class="meta-info">
-					<p>Available for freelance.<br />v2.4 —</p>
+				<footer class="sidebar-footer">
+					<div class="social-links">
+						<a
+							href="https://github.com/kerpooo"
+							target="_blank"
+							rel="noopener"
+							class="social-link"
+							>GitHub</a
+						>
+						<a
+							href="https://linkedin.com/in/kevinrincon"
+							target="_blank"
+							rel="noopener"
+							class="social-link"
+							>LinkedIn</a
+						>
+					</div>
+					<div class="status">
+						<span class="status-dot"></span>
+						Available for freelance
+					</div>
+				</footer>
+			</aside>
+			<section class="content-area">
+				<div id="projects">
+					<span class="section-label">01 — Selected Works</span>
+					<div class="project-list">
+						<project-card></project-card>
+						<project-card></project-card>
+						<project-card></project-card>
+						<project-card></project-card>
+					</div>
 				</div>
-			</div>
-		</aside>
-		<section class="content-area">
-			<div id="projects">
-				<span class="section-label">01 — Selected Works</span>
-				<div class="project-list">
-					<project-card></project-card>
-					<project-card></project-card>
-					<project-card></project-card>
-					<project-card></project-card>
-				</div>
-			</div>
 
-			<div id="experience" style="margin-top: 40px">
-				<span class="section-label">02 — Experience</span>
-				<table class="experience-table">
-					<tbody>
+				<div id="experience" style="margin-top: 40px">
+					<span class="section-label">02 — Experience</span>
+					<div class="experience-list">
 						<experience-row></experience-row>
 						<experience-row></experience-row>
 						<experience-row></experience-row>
-					</tbody>
-				</table>
-			</div>
-		</section>
+					</div>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>
