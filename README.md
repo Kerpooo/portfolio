@@ -6,7 +6,7 @@ A modern, high-performance portfolio website built with **TypeScript**, **Web Co
 
 ---
 
-## ✨ Features
+## ✨ Features 👌
 
 - **🌐 Bilingual** - Seamless English/Spanish language switching
 - **⚡ High Performance** - Built with Vite for fast load times
