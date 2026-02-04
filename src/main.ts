@@ -3,10 +3,7 @@ import "./components/ExperienceRow"
 import { projectsData, experienceData } from "./data/portfolio"
 import { translations, type Language } from "./i18n/translations"
 
-let currentLang: Language = "en"
-
 const setLanguage = (lang: Language) => {
-	currentLang = lang
 	document.documentElement.lang = lang
 
 	document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -19,6 +16,11 @@ const setLanguage = (lang: Language) => {
 	document.querySelectorAll(".lang-btn").forEach((btn) => {
 		btn.classList.toggle("active", btn.getAttribute("data-lang") === lang)
 	})
+
+	const cvLink = document.getElementById("download-cv") as HTMLAnchorElement
+	if (cvLink) {
+		cvLink.href = `/Kevin_Rincon_CV_${lang.toUpperCase()}.pdf`
+	}
 
 	localStorage.setItem("lang", lang)
 }

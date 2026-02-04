@@ -11,6 +11,7 @@ export const translations: Record<Language, Record<string, string>> = {
 		sectionWorks: "01 — Selected Works",
 		sectionExperience: "02 — Experience",
 		backToTop: "Back to top",
+		downloadCV: "Download CV",
 	},
 	es: {
 		role: "Ingeniero de Sistemas",
@@ -22,6 +23,7 @@ export const translations: Record<Language, Record<string, string>> = {
 		sectionWorks: "01 — Trabajos",
 		sectionExperience: "02 — Experiencia",
 		backToTop: "Volver arriba",
+		downloadCV: "Descargar CV",
 	},
 }
 

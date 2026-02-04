@@ -1,55 +1,72 @@
 export const projectsData = [
 	{
-		title: "Fintech Dashboard",
-		year: "2023",
+		title: "SlideGen",
+		year: "2026",
 		description:
-			"A comprehensive asset management interface designed for institutional investors. Focus on real-time data visualization and sub-millisecond latency.",
-		tech: ["React", "D3.js", "WebSocket", "TypeScript"],
-		href: "https://github.com/tuusuario/proyecto1"
+			"Presentation generator that creates slide decks from text marks.",
+		tech: ["FastApi", "AWS"],
+		thumbnail: "/slidegen.kevvek.xyz_.png",
+		href: "https://slidegen.kevvek.xyz"
 	},
 	{
-		title: "E-Commerce Platform",
+		title: "FailFast ERP",
 		year: "2024",
 		description:
-			"Scalable microservices architecture handling 100k+ daily transactions with real-time inventory management.",
-		tech: ["Node.js", "PostgreSQL", "Redis", "Docker"],
-		href: "https://github.com/tuusuario/proyecto2"
+			"AI-powered intelligent ERP enabling businesses to design and automate workflows, agents, and custom modules. Led development of 6-engineer team, reducing manual configuration time by 60%.",
+		tech: [
+			"Next.js",
+			"PostgreSQL",
+			"Django",
+			"LangGraph",
+			"AWS"
+		],
+		thumbnail: "/www.fail-fast.ai_.png",
+		href: "https://www.fail-fast.ai/"
 	},
 	{
-		title: "AI Content Generator",
+		title: "Crystal3D",
+		year: "2025",
+		description:
+			"Interactive 3D web platform with authentication, payment processing, and subscription management. Features 3D model viewer with animations using Three.js.",
+		tech: ["Next.js", "Three.js", "PostgreSQL", "Clerk", "Wompi API"],
+		thumbnail: "/crystal3d.png",
+		href: "https://crystal.overwatch.com.co"
+	},
+	{
+		title: "EventPlus",
 		year: "2024",
 		description:
-			"Machine learning powered content generation tool with natural language processing capabilities.",
-		tech: ["Python", "TensorFlow", "FastAPI", "Vue.js"],
-		href: "https://github.com/tuusuario/proyecto3"
+			"Event management web app for concerts and conferences with integrated photo documentation and automatic evidence format generation. Achieved 98% mobile usability score.",
+		tech: ["Next.js", "TypeScript", "PostgreSQL", "Prisma", "Tailwind CSS"],
+		href: "https://github.com/Kerpooo"
 	},
 	{
-		title: "IoT Monitoring System",
+		title: "UDI Platform",
 		year: "2023",
 		description:
-			"Real-time monitoring dashboard for industrial IoT devices with predictive maintenance alerts.",
-		tech: ["Go", "MQTT", "InfluxDB", "Grafana"],
-		href: "https://github.com/tuusuario/proyecto4"
+			"Full-stack web application solving technical-administrative challenges for educational institution. Deployed to production supporting 500+ concurrent users.",
+		tech: ["React", "FastAPI", "PostgreSQL", "Python"],
+		href: "https://github.com/Kerpooo"
 	}
 ]
 
 export const experienceData = [
 	{
-		role: "Senior Full Stack Developer",
-		company: "Tech Corp",
-		start_date: "Jan 2022",
+		role: "Full Stack Developer",
+		company: "FailFast (Startup)",
+		start_date: "Aug 2024",
+		end_date: "Dec 2025"
+	},
+	{
+		role: "Full Stack Developer",
+		company: "Overwatch Co - Crystal3D",
+		start_date: "Sep 2025",
 		end_date: "Present"
 	},
 	{
-		role: "Backend Engineer",
-		company: "StartupXYZ",
-		start_date: "Jun 2020",
-		end_date: "Dec 2021"
-	},
-	{
-		role: "Software Developer",
-		company: "Digital Agency",
-		start_date: "Jan 2019",
-		end_date: "May 2020"
+		role: "Full Stack Developer",
+		company: "Overwatch Co - EventPlus",
+		start_date: "Jan 2024",
+		end_date: "Sep 2024"
 	}
 ]

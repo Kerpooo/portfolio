@@ -4,6 +4,7 @@ interface ProjectData {
 	description: string
 	tech: string[]
 	href?: string
+	thumbnail?: string
 }
 
 class ProjectCard extends HTMLElement {
@@ -22,14 +23,21 @@ class ProjectCard extends HTMLElement {
 		return this._data
 	}
 
+	private renderVisual(): string {
+		if (this._data?.thumbnail) {
+			return `<img src="${this._data.thumbnail}" alt="${this._data.title}" class="project-thumbnail" />`
+		}
+		return `<div class="ui-abstract" style="border-radius: 4px; background: #0a0a0a;"></div>`
+	}
+
 	private render() {
 		if (!this._data) return
 
-		this.innerHTML = `        
-        <a href="${this._data.href || "#"}" class="project-card">
+		this.innerHTML = `
+        <a href="${this._data.href || "#"}" class="project-card" target="_blank" rel="noopener">
             <div class="project-visual">
                 <div class="visual-content">
-                    <div class="ui-abstract" style="border-radius: 4px; background: #0a0a0a;"></div>
+                    ${this.renderVisual()}
                 </div>
             </div>
             <div class="project-info">
