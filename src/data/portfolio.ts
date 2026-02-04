@@ -5,7 +5,7 @@ export const projectsData = [
 		description:
 			"Presentation generator that creates slide decks from text marks.",
 		tech: ["FastApi", "AWS"],
-		thumbnail: "/slidegen.kevvek.xyz_.png",
+		thumbnail: "/slidegen.kevvek.xyz_.webp",
 		href: "https://slidegen.kevvek.xyz"
 	},
 	{
@@ -20,7 +20,7 @@ export const projectsData = [
 			"LangGraph",
 			"AWS"
 		],
-		thumbnail: "/www.fail-fast.ai_.png",
+		thumbnail: "/www.fail-fast.ai_.webp",
 		href: "https://www.fail-fast.ai/"
 	},
 	{
@@ -29,7 +29,7 @@ export const projectsData = [
 		description:
 			"Interactive 3D web platform with authentication, payment processing, and subscription management. Features 3D model viewer with animations using Three.js.",
 		tech: ["Next.js", "Three.js", "PostgreSQL", "Clerk", "Wompi API"],
-		thumbnail: "/crystal3d.png",
+		thumbnail: "/crystal3d.webp",
 		href: "https://crystal.overwatch.com.co"
 	},
 	{
