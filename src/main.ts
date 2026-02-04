@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	const savedLang = localStorage.getItem("lang") as Language | null
 	if (savedLang) {
 		setLanguage(savedLang)
+	} else {
+		const browserLang = navigator.language.split("-")[0]
+		setLanguage(browserLang === "es" ? "es" : "en")
 	}
 
 	document.querySelectorAll(".lang-btn").forEach((btn) => {
